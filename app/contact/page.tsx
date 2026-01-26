@@ -12,7 +12,7 @@ export default function ContactPage() {
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <h1 className="text-5xl lg:text-7xl font-black mb-6 gradient-text-vibrant">
-                            Ready to Build the Future?
+                            Ready to Build the Future? kk
                         </h1>
                         <p className="text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
                             Book a free 30-minute consultation to discuss your blockchain roadmap with our experts.
