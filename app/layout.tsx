@@ -50,7 +50,7 @@ const unigeo = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "mintymind | Canadian Standards. Global Technical Excellence.",
+  title: "Nifty Minds | Canadian Standards. Global Technical Excellence.",
   description: "Bridging North American business needs with world-class blockchain development. Specializing in Rust, Solidity, and Enterprise Web3 solutions.",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };

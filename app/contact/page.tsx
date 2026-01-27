@@ -102,8 +102,8 @@ export default function ContactPage() {
                                         <div className="text-3xl">📧</div>
                                         <div>
                                             <h4 className="font-bold text-white mb-1">Email</h4>
-                                            <a href="mailto:hello@mintymind.io" className="text-brand-primary hover:text-brand-secondary transition-colors">
-                                                hello@mintymind.io
+                                            <a href="mailto:hello@niftyminds.io" className="text-brand-primary hover:text-brand-secondary transition-colors">
+                                                hello@niftyminds.io
                                             </a>
                                         </div>
                                     </div>
@@ -159,7 +159,7 @@ export default function ContactPage() {
                                     Need to move fast? We can start as soon as next week.
                                 </p>
                                 <a
-                                    href="mailto:hello@mintymind.io?subject=Urgent Project Inquiry"
+                                    href="mailto:hello@niftyminds.io?subject=Urgent Project Inquiry"
                                     className="inline-block px-6 py-3 rounded-lg border border-brand-primary text-brand-primary hover:bg-brand-primary/10 font-semibold text-sm transition-all duration-300"
                                 >
                                     Email Us Directly

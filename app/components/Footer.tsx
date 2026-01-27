@@ -10,9 +10,9 @@ export default function Footer() {
                     <div className="col-span-1">
                         <Link href="/" className="flex items-center gap-3 mb-4">
                             <div className="relative w-8 h-8">
-                                <Image src="/logo.png" alt="mintymind logo" fill className="object-contain" />
+                                <Image src="/logo.png" alt="Nifty Minds logo" fill className="object-contain" />
                             </div>
-                            <span className="font-bold text-xl text-white">mintymind</span>
+                            <span className="font-bold text-xl text-white">Nifty Minds</span>
                         </Link>
                         <p className="text-sm text-text-muted">
                             Canada-Nigeria technology consultancy specializing in blockchain and Web3 development.
@@ -58,7 +58,7 @@ export default function Footer() {
 
                 <div className="pt-8 border-t border-brand-primary/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-text-muted">
-                        © {new Date().getFullYear()} mintymind. All rights reserved.
+                        © {new Date().getFullYear()} Nifty Minds. All rights reserved.
                     </p>
                     <div className="flex gap-6 text-sm text-text-muted">
                         <Link href="/privacy" className="hover:text-brand-primary transition-colors">Privacy</Link>

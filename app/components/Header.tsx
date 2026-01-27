@@ -12,10 +12,10 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex justify-between items-center">
                 <Link href="/" className="flex items-center gap-2 md:gap-3 group cursor-pointer">
                     <div className="relative w-8 h-8 md:w-10 md:h-10 transition-transform group-hover:scale-110 duration-300">
-                        <Image src="/logo.png" alt="mintymind logo" fill className="object-contain" />
+                        <Image src="/logo.png" alt="Nifty Minds logo" fill className="object-contain" />
                     </div>
                     <span className="font-bold text-xl md:text-2xl tracking-tight text-white">
-                        Mintymind
+                        Nifty Minds
                     </span>
                 </Link>
 

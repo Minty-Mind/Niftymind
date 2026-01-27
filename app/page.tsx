@@ -141,7 +141,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 gradient-text-white-green">
-                Why Choose mintymind
+                Why Choose Nifty Minds
               </h2>
               <p className="text-xl text-text-secondary max-w-3xl mx-auto">
                 We bridge the gap between Canadian business standards and global technical excellence, giving you the best of both worlds.

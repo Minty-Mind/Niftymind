@@ -14,7 +14,7 @@ export default function AboutPage() {
                     {/* Header */}
                     <div className="text-center mb-20">
                         <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 text-white tracking-tight">
-                            About <span className="gradient-text-green">mintymind</span>
+                            About <span className="gradient-text-green">Nifty Minds</span>
                         </h1>
                         <p className="text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
                             We're a Canada-Nigeria technology consultancy bridging continents to deliver exceptional blockchain solutions.
@@ -173,7 +173,7 @@ export default function AboutPage() {
                             Let's Work Together
                         </h2>
                         <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-                            Ready to experience the mintymind difference? Book a call and let's discuss your project.
+                            Ready to experience the Nifty Minds difference? Book a call and let's discuss your project.
                         </p>
                         <Link
                             href="/contact"
