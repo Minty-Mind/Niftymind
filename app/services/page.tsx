@@ -1,104 +1,210 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import BackgroundOrbs from "../components/BackgroundOrbs";
+import TechBackground from "../components/TechBackground";
+import Link from "next/link";
 
 export default function ServicesPage() {
+    const services = [
+        {
+            id: "blockchain",
+            icon: "⛓️",
+            title: "Blockchain & Web3 Development",
+            tagline: "Custom blockchain solutions built for scale and security",
+            description: "We build production-ready blockchain applications using Solidity, Rust, and modern Web3 frameworks. From smart contracts to full DeFi protocols, we handle the entire development lifecycle.",
+            whoItsFor: "Web3 startups, DeFi protocols, NFT projects, and enterprises exploring blockchain",
+            businessValue: [
+                "Faster time to market with experienced developers",
+                "Reduced risk through security-first development",
+                "Scalable architecture that grows with your business",
+                "Lower long-term costs with clean, maintainable code"
+            ],
+            capabilities: [
+                "Smart contract development (Solidity, Rust, Move)",
+                "DeFi protocol architecture and implementation",
+                "NFT marketplace and minting platforms",
+                "Layer 2 scaling solutions",
+                "Cross-chain bridge development",
+                "Decentralized governance systems"
+            ]
+        },
+        {
+            id: "audits",
+            icon: "🛡️",
+            title: "Smart Contract Audits & Security",
+            tagline: "Comprehensive security assessments before you deploy",
+            description: "Our security team conducts thorough audits of your smart contracts to identify vulnerabilities, optimize gas usage, and ensure your code meets industry best practices.",
+            whoItsFor: "Any project deploying smart contracts to mainnet, especially those handling user funds",
+            businessValue: [
+                "Protect your users and your reputation",
+                "Avoid costly exploits and hacks",
+                "Build trust with investors and users",
+                "Meet compliance and insurance requirements"
+            ],
+            capabilities: [
+                "Line-by-line code review",
+                "Automated vulnerability scanning",
+                "Gas optimization analysis",
+                "Reentrancy and overflow protection",
+                "Access control verification",
+                "Detailed audit reports with remediation steps"
+            ]
+        },
+        {
+            id: "fintech",
+            icon: "💳",
+            title: "Fintech & Payment Infrastructure",
+            tagline: "Secure, compliant financial systems",
+            description: "We build payment systems, custody solutions, and blockchain-based financial services that meet Canadian regulatory standards while leveraging the efficiency of blockchain technology.",
+            whoItsFor: "Fintech startups, payment processors, digital banks, and financial institutions",
+            businessValue: [
+                "Faster settlement times with blockchain rails",
+                "Lower transaction costs compared to traditional systems",
+                "Enhanced security and transparency",
+                "Regulatory compliance built-in from day one"
+            ],
+            capabilities: [
+                "Payment gateway integration",
+                "Cryptocurrency custody solutions",
+                "Stablecoin payment systems",
+                "KYC/AML compliance tools",
+                "Multi-signature wallet systems",
+                "Real-time settlement infrastructure"
+            ]
+        },
+        {
+            id: "mvp",
+            icon: "🚀",
+            title: "MVP & Startup Engineering",
+            tagline: "Get to market fast without compromising quality",
+            description: "We help startups build and launch MVPs quickly. Our team works as an extension of yours, providing the technical expertise you need to validate your idea and secure funding.",
+            whoItsFor: "Early-stage startups, founders without technical co-founders, companies pivoting to Web3",
+            businessValue: [
+                "Launch in weeks, not months",
+                "Validate your idea with real users",
+                "Impress investors with a working product",
+                "Build on a foundation that scales"
+            ],
+            capabilities: [
+                "Rapid prototyping and development",
+                "Full-stack application development",
+                "Product strategy and technical planning",
+                "User testing and iteration",
+                "Investor demo preparation",
+                "Post-launch support and scaling"
+            ]
+        },
+        {
+            id: "backend",
+            icon: "⚙️",
+            title: "Backend & API Development",
+            tagline: "Scalable infrastructure for modern applications",
+            description: "We build robust backend systems and APIs using Node.js, Rust, and cloud-native technologies. Whether you need to integrate with blockchain networks or build traditional web services, we've got you covered.",
+            whoItsFor: "Companies needing reliable backend infrastructure, blockchain indexing, or API development",
+            businessValue: [
+                "Handle millions of requests with confidence",
+                "Reduce infrastructure costs with efficient code",
+                "Integrate seamlessly with blockchain networks",
+                "Scale automatically as your user base grows"
+            ],
+            capabilities: [
+                "RESTful and GraphQL API development",
+                "Blockchain indexing and data aggregation",
+                "Microservices architecture",
+                "Database design and optimization",
+                "Cloud deployment (AWS, GCP, Azure)",
+                "Real-time data processing"
+            ]
+        }
+    ];
+
     return (
-        <div className="min-h-screen relative">
-            <BackgroundOrbs />
+        <div className="min-h-screen relative bg-bg-primary">
+            <TechBackground />
             <Header />
 
             <main className="relative z-10 pt-32 pb-24 px-6">
                 <div className="max-w-7xl mx-auto">
+                    {/* Header */}
                     <div className="text-center mb-20">
-                        <h1 className="text-5xl lg:text-7xl font-black mb-6 gradient-text-secondary">
-                            Core Offerings
+                        <h1 className="text-5xl lg:text-6xl font-black mb-6 text-white">
+                            Our <span className="gradient-text-green">Services</span>
                         </h1>
                         <p className="text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                            End-to-end blockchain solutions tailored for visionary enterprises and ambitious startups.
+                            End-to-end blockchain and software development services designed for security, scalability, and long-term success.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-                        {[
-                            {
-                                icon: "⛓️",
-                                title: "Blockchain Development",
-                                desc: "Custom Layer 1 and Layer 2 solutions with high-performance Rust backends and decentralized architectures.",
-                                gradient: "from-brand-primary to-brand-secondary",
-                                features: [
-                                    "Custom blockchain protocols",
-                                    "Smart contract development (Solidity, Move, Rust)",
-                                    "DeFi protocol architecture",
-                                    "NFT marketplace development",
-                                    "Layer 2 scaling solutions"
-                                ]
-                            },
-                            {
-                                icon: "🛡️",
-                                title: "Smart Contract Audits",
-                                desc: "Institutional-grade security assessments for Solidity and Move contracts with comprehensive vulnerability analysis.",
-                                gradient: "from-brand-secondary to-brand-accent",
-                                features: [
-                                    "Comprehensive security audits",
-                                    "Gas optimization analysis",
-                                    "Vulnerability detection",
-                                    "Detailed audit reports",
-                                    "Post-audit support"
-                                ]
-                            },
-                            {
-                                icon: "🏗️",
-                                title: "Enterprise Integration",
-                                desc: "Seamless blockchain integration for traditional systems across logistics, healthcare, and financial services.",
-                                gradient: "from-brand-accent to-brand-primary",
-                                features: [
-                                    "Legacy system integration",
-                                    "Supply chain transparency",
-                                    "Healthcare data security",
-                                    "Financial settlement systems",
-                                    "Compliance & regulatory support"
-                                ]
-                            }
-                        ].map((service, i) => (
+                    {/* Services */}
+                    <div className="space-y-20">
+                        {services.map((service, index) => (
                             <div
-                                key={i}
-                                className="group glass-strong rounded-3xl p-8 hover:-translate-y-3 transition-all duration-500 hover:border-brand-primary/50 cursor-pointer relative overflow-hidden"
+                                key={service.id}
+                                id={service.id}
+                                className="glass-darker rounded-3xl p-10 lg:p-12 border-glow scroll-mt-32"
                             >
-                                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                                <div className="flex items-start gap-6 mb-8">
+                                    <div className="text-6xl">{service.icon}</div>
+                                    <div className="flex-1">
+                                        <h2 className="text-3xl lg:text-4xl font-extrabold mb-3 text-white">
+                                            {service.title}
+                                        </h2>
+                                        <p className="text-xl text-brand-primary font-bold tracking-tight">
+                                            {service.tagline}
+                                        </p>
+                                    </div>
+                                </div>
 
-                                <div className="relative z-10">
-                                    <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                                    <h3 className="text-2xl font-bold mb-4 text-white group-hover:gradient-text-primary transition-all">{service.title}</h3>
-                                    <p className="text-text-secondary leading-relaxed mb-6">{service.desc}</p>
+                                <p className="text-lg text-text-secondary leading-relaxed mb-8">
+                                    {service.description}
+                                </p>
 
-                                    <ul className="space-y-2 text-sm text-text-muted">
-                                        {service.features.map((feature, idx) => (
-                                            <li key={idx} className="flex items-start gap-2">
-                                                <span className="text-brand-accent mt-0.5">✓</span>
-                                                <span>{feature}</span>
-                                            </li>
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                                    <div>
+                                        <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-4">Who It's For</h3>
+                                        <p className="text-text-secondary">{service.whoItsFor}</p>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-4">Business Value</h3>
+                                        <ul className="space-y-2">
+                                            {service.businessValue.map((value, idx) => (
+                                                <li key={idx} className="flex items-start gap-2 text-text-secondary text-sm">
+                                                    <span className="text-brand-primary mt-0.5 flex-shrink-0">✓</span>
+                                                    <span>{value}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-sm font-bold uppercase tracking-widest text-white mb-4">What We Deliver</h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                                        {service.capabilities.map((capability, idx) => (
+                                            <div key={idx} className="glass-dark rounded-lg p-3 text-sm text-text-secondary">
+                                                {capability}
+                                            </div>
                                         ))}
-                                    </ul>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* CTA Section */}
-                    <div className="glass-strong rounded-3xl p-12 text-center max-w-4xl mx-auto">
-                        <h2 className="text-3xl lg:text-5xl font-black mb-6 gradient-text-vibrant">
-                            Ready to Get Started?
+                    {/* CTA */}
+                    <div className="mt-20 glass-darker rounded-3xl p-12 text-center border-glow">
+                        <h2 className="text-3xl lg:text-4xl font-black mb-6 gradient-text-white-green">
+                            Not Sure Which Service You Need?
                         </h2>
                         <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-                            Let's discuss how we can help bring your blockchain vision to life with our proven expertise.
+                            Book a free discovery call. We'll discuss your project goals and recommend the right approach.
                         </p>
-                        <a
+                        <Link
                             href="/contact"
-                            className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent text-white font-bold text-lg hover:shadow-2xl hover:shadow-brand-primary/50 transition-all duration-300 hover:scale-105 pulse-glow"
+                            className="inline-block px-8 py-4 rounded-lg bg-brand-primary text-bg-primary font-bold text-lg hover:glow-green transition-all duration-300 hover:scale-105"
                         >
-                            Schedule a Consultation →
-                        </a>
+                            Schedule a Call
+                        </Link>
                     </div>
                 </div>
             </main>

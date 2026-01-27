@@ -1,149 +1,186 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import BackgroundOrbs from "../components/BackgroundOrbs";
+import TechBackground from "../components/TechBackground";
+import Link from "next/link";
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen relative">
-            <BackgroundOrbs />
+        <div className="min-h-screen relative bg-bg-primary">
+            <TechBackground />
             <Header />
 
             <main className="relative z-10 pt-32 pb-24 px-6">
                 <div className="max-w-7xl mx-auto">
-                    {/* Hero Section */}
+                    {/* Header */}
                     <div className="text-center mb-20">
-                        <h1 className="text-5xl lg:text-7xl font-black mb-6 leading-tight">
-                            <span className="gradient-text-vibrant">The Dual-Continent</span>
-                            <br />
-                            <span className="text-white">Advantage</span>
+                        <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 text-white tracking-tight">
+                            About <span className="gradient-text-green">mintymind</span>
                         </h1>
                         <p className="text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                            <span className="font-bold text-white">mintymind</span> harnesses a unique synergy between
-                            Canadian business excellence and Nigerian technical mastery to deliver unparalleled results.
+                            We're a Canada-Nigeria technology consultancy bridging continents to deliver exceptional blockchain solutions.
                         </p>
                     </div>
 
-                    {/* Main Content Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-                        <div className="space-y-8">
+                    {/* Mission */}
+                    <div className="glass-darker rounded-3xl p-12 lg:p-16 mb-16 border-glow">
+                        <h2 className="text-3xl lg:text-4xl font-extrabold mb-6 text-white tracking-tight">Our Mission</h2>
+                        <p className="text-xl text-text-secondary leading-relaxed mb-6">
+                            We exist to make world-class blockchain development accessible to Canadian startups and enterprises. By combining Canadian business standards with elite engineering talent, we deliver secure, scalable solutions at a pace and price point that traditional agencies can't match.
+                        </p>
+                        <p className="text-lg text-text-secondary leading-relaxed">
+                            We believe the future of technology is global, collaborative, and built on trust. That's why we've structured our team to give you the best of both worlds: local project management and communication paired with world-class technical execution.
+                        </p>
+                    </div>
+
+                    {/* The Model */}
+                    <div className="mb-20">
+                        <h2 className="text-3xl lg:text-4xl font-extrabold mb-12 text-center text-white tracking-tight">
+                            Our <span className="gradient-text-green">Cross-Border</span> Model
+                        </h2>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                            {/* Toronto */}
+                            <div className="glass-darker rounded-3xl p-10 border-glow">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="text-6xl">🇨🇦</div>
+                                    <div>
+                                        <div className="text-xs font-bold uppercase tracking-widest text-brand-primary mb-1">Toronto, Canada</div>
+                                        <h3 className="text-2xl font-bold text-white">Business & Strategy</h3>
+                                    </div>
+                                </div>
+
+                                <p className="text-text-secondary mb-6 leading-relaxed">
+                                    Our Toronto office handles all client-facing operations, ensuring you get the clear communication, transparency, and business standards you expect from a Canadian company.
+                                </p>
+
+                                <h4 className="text-sm font-bold uppercase tracking-widest text-white mb-4">What We Handle</h4>
+                                <ul className="space-y-2 text-text-secondary text-sm">
+                                    {[
+                                        "Project management and client communication",
+                                        "Business strategy and technical planning",
+                                        "Compliance and regulatory guidance",
+                                        "Contract negotiation and legal coordination",
+                                        "Quality assurance and delivery oversight"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2">
+                                            <span className="text-brand-primary mt-0.5">✓</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Lagos */}
+                            <div className="glass-darker rounded-3xl p-10 border-glow">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="text-6xl">🇳🇬</div>
+                                    <div>
+                                        <div className="text-xs font-bold uppercase tracking-widest text-brand-primary mb-1">Lagos, Nigeria</div>
+                                        <h3 className="text-2xl font-bold text-white">Engineering & Development</h3>
+                                    </div>
+                                </div>
+
+                                <p className="text-text-secondary mb-6 leading-relaxed">
+                                    Our Lagos-based engineering team brings deep expertise in Rust, Solidity, and modern Web3 frameworks. They're the technical powerhouse behind every project we deliver.
+                                </p>
+
+                                <h4 className="text-sm font-bold uppercase tracking-widest text-white mb-4">What We Build</h4>
+                                <ul className="space-y-2 text-text-secondary text-sm">
+                                    {[
+                                        "Smart contract development and auditing",
+                                        "Backend and distributed systems",
+                                        "DeFi protocol architecture",
+                                        "API development and integration",
+                                        "Security testing and optimization"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2">
+                                            <span className="text-brand-primary mt-0.5">✓</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Why This Works */}
+                    <div className="glass-darker rounded-3xl p-12 lg:p-16 mb-16 border-glow">
+                        <h2 className="text-3xl lg:text-4xl font-black mb-8 text-white">Why This Model Works</h2>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {
-                                    flag: "🇨🇦",
-                                    title: "Onshore Management",
-                                    desc: "North American business rigor, transparent communication, and local project oversight.",
-                                    color: "brand-primary",
-                                    details: [
-                                        "Toronto-based project management",
-                                        "Real-time communication in your timezone",
-                                        "Canadian business standards & compliance",
-                                        "Direct access to leadership"
-                                    ]
+                                    icon: "⚡",
+                                    title: "24/7 Development",
+                                    desc: "While Toronto sleeps, Lagos builds. Your project progresses around the clock."
                                 },
                                 {
-                                    flag: "🇳🇬",
-                                    title: "Global Dev Power",
-                                    desc: "Elite Rust and Solidity engineers working in complementary time zones for 24-hour development cycles.",
-                                    color: "brand-secondary",
-                                    details: [
-                                        "Lagos-based technical team",
-                                        "World-class Rust & Solidity expertise",
-                                        "Continuous development workflow",
-                                        "Cost-effective premium talent"
-                                    ]
+                                    icon: "💎",
+                                    title: "Premium Quality",
+                                    desc: "You get Canadian business standards paired with world-class technical talent."
+                                },
+                                {
+                                    icon: "💰",
+                                    title: "Smart Economics",
+                                    desc: "Access elite developers at rates that make sense for your budget."
                                 }
                             ].map((item, i) => (
-                                <div key={i} className="glass-strong rounded-3xl p-8 group hover:border-brand-primary/50 transition-all duration-300">
-                                    <div className="flex gap-5 items-start">
-                                        <div className={`text-5xl group-hover:scale-125 transition-transform duration-300`}>
-                                            {item.flag}
-                                        </div>
-                                        <div className="flex-1">
-                                            <h3 className={`text-2xl font-bold text-${item.color} mb-3`}>{item.title}</h3>
-                                            <p className="text-text-secondary leading-relaxed mb-6">{item.desc}</p>
-
-                                            <ul className="space-y-2 text-sm">
-                                                {item.details.map((detail, idx) => (
-                                                    <li key={idx} className="flex items-start gap-2 text-text-muted">
-                                                        <span className="text-brand-accent mt-0.5">✓</span>
-                                                        <span>{detail}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div key={i} className="text-center">
+                                    <div className="text-5xl mb-4">{item.icon}</div>
+                                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                                    <p className="text-text-secondary text-sm">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
+                    </div>
 
-                        <div className="space-y-8">
-                            {/* Always-On Development */}
-                            <div className="glass-strong rounded-3xl p-12 text-center relative overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 to-brand-secondary/10"></div>
+                    {/* Values */}
+                    <div className="mb-16">
+                        <h2 className="text-3xl lg:text-4xl font-black mb-12 text-center text-white">
+                            Our <span className="gradient-text-green">Values</span>
+                        </h2>
 
-                                <div className="relative z-10">
-                                    <div className="text-7xl mb-8 float-animation">🌍</div>
-                                    <h3 className="text-3xl font-black mb-6 gradient-text-primary">Always-On Development</h3>
-                                    <p className="text-lg text-text-secondary leading-relaxed mb-8">
-                                        While one hemisphere sleeps, the other builds. This ensures lightning-fast delivery cycles and unmatched responsiveness.
-                                    </p>
-
-                                    <div className="grid grid-cols-2 gap-4 text-sm">
-                                        <div className="glass rounded-xl p-4">
-                                            <div className="font-bold text-brand-accent mb-1">Toronto</div>
-                                            <div className="text-text-muted">9 AM - 5 PM EST</div>
-                                        </div>
-                                        <div className="glass rounded-xl p-4">
-                                            <div className="font-bold text-brand-secondary mb-1">Lagos</div>
-                                            <div className="text-text-muted">2 PM - 10 PM WAT</div>
-                                        </div>
-                                    </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {[
+                                {
+                                    title: "Trust & Transparency",
+                                    desc: "We communicate clearly, meet our commitments, and never overpromise. You'll always know exactly where your project stands."
+                                },
+                                {
+                                    title: "Security First",
+                                    desc: "Every line of code is written with security in mind. We follow industry best practices and conduct thorough testing before deployment."
+                                },
+                                {
+                                    title: "Long-Term Partnership",
+                                    desc: "We're not just developers for hire. We're strategic partners invested in your long-term success."
+                                },
+                                {
+                                    title: "Technical Excellence",
+                                    desc: "We stay at the cutting edge of blockchain technology, constantly learning and improving our craft."
+                                }
+                            ].map((value, i) => (
+                                <div key={i} className="glass-dark rounded-2xl p-8">
+                                    <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                                    <p className="text-text-secondary leading-relaxed">{value.desc}</p>
                                 </div>
-                            </div>
-
-                            {/* Why This Matters */}
-                            <div className="glass-strong rounded-3xl p-8">
-                                <h3 className="text-2xl font-bold mb-6 gradient-text-secondary">Why This Matters</h3>
-                                <div className="space-y-4 text-text-secondary">
-                                    <div className="flex gap-3 items-start">
-                                        <span className="text-2xl">⚡</span>
-                                        <div>
-                                            <h4 className="font-bold text-white mb-1">Faster Time to Market</h4>
-                                            <p className="text-sm">Round-the-clock development means your project progresses 24/7, not just 8 hours a day.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-3 items-start">
-                                        <span className="text-2xl">💰</span>
-                                        <div>
-                                            <h4 className="font-bold text-white mb-1">Premium Quality, Smart Pricing</h4>
-                                            <p className="text-sm">Access world-class talent at rates that make sense for your budget.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-3 items-start">
-                                        <span className="text-2xl">🤝</span>
-                                        <div>
-                                            <h4 className="font-bold text-white mb-1">Best of Both Worlds</h4>
-                                            <p className="text-sm">Canadian business standards with global technical excellence.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
 
                     {/* CTA */}
-                    <div className="glass-strong rounded-3xl p-12 text-center max-w-4xl mx-auto">
-                        <h2 className="text-3xl lg:text-5xl font-black mb-6 gradient-text-vibrant">
-                            Experience the Difference
+                    <div className="glass-darker rounded-3xl p-12 text-center border-glow">
+                        <h2 className="text-3xl lg:text-4xl font-black mb-6 gradient-text-white-green">
+                            Let's Work Together
                         </h2>
                         <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-                            Join forward-thinking companies who've discovered the power of our dual-continent approach.
+                            Ready to experience the mintymind difference? Book a call and let's discuss your project.
                         </p>
-                        <a
+                        <Link
                             href="/contact"
-                            className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent text-white font-bold text-lg hover:shadow-2xl hover:shadow-brand-primary/50 transition-all duration-300 hover:scale-105 pulse-glow"
+                            className="inline-block px-8 py-4 rounded-lg bg-brand-primary text-bg-primary font-bold text-lg hover:glow-green transition-all duration-300 hover:scale-105"
                         >
-                            Let's Talk →
-                        </a>
+                            Get Started
+                        </Link>
                     </div>
                 </div>
             </main>
