@@ -2,6 +2,7 @@ import Link from "next/link";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TechBackground from "./components/TechBackground";
+import NeuralBackground from "@/components/ui/flow-field-background";
 
 export default function Home() {
   return (
@@ -11,8 +12,17 @@ export default function Home() {
 
       <main className="relative z-10">
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center pt-24 px-4 sm:px-6">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="min-h-screen flex items-center justify-center pt-24 px-4 sm:px-6 relative overflow-hidden">
+          {/* Neural Background for Hero */}
+          <div className="absolute inset-0 z-0">
+            <NeuralBackground
+              color="#00ff88"
+              speed={0.8}
+              trailOpacity={0.2}
+            />
+          </div>
+
+          <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-block mb-6 px-4 py-2 rounded-full glass-dark border border-brand-primary/20 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-primary animate-fade-in-up">
               Canada-Nigeria Technology Consultancy
             </div>
