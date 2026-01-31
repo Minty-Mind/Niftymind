@@ -95,7 +95,7 @@ export default function HowWeWorkPage() {
                     {/* Header */}
                     <div className="text-center mb-20">
                         <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 text-white tracking-tight">
-                            How We <span className="gradient-text-green">Work</span>
+                            How We <span className="gradient-text-brand">Work</span>
                         </h1>
                         <p className="text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
                             A proven, transparent process designed to deliver exceptional results on time and on budget.
@@ -107,7 +107,7 @@ export default function HowWeWorkPage() {
                         {process.map((item, index) => (
                             <div key={index} className="glass-darker rounded-3xl p-10 lg:p-12 border-glow">
                                 <div className="flex items-start gap-6 mb-8">
-                                    <div className="text-7xl font-black text-brand-primary/30">{item.step}</div>
+                                    <div className="text-7xl font-black text-brand-primary/30 font-system">{item.step}</div>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-4 mb-2">
                                             <h2 className="text-3xl lg:text-4xl font-extrabold text-white tracking-tight">{item.title}</h2>
@@ -153,7 +153,7 @@ export default function HowWeWorkPage() {
                     {/* Communication */}
                     <div className="glass-darker rounded-3xl p-12 lg:p-16 mb-16 border-glow">
                         <h2 className="text-3xl lg:text-4xl font-extrabold mb-8 text-white tracking-tight">
-                            Communication & <span className="gradient-text-green">Transparency</span>
+                            Communication & <span className="gradient-text-brand">Transparency</span>
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -181,7 +181,7 @@ export default function HowWeWorkPage() {
 
                     {/* CTA */}
                     <div className="glass-darker rounded-3xl p-12 text-center border-glow">
-                        <h2 className="text-3xl lg:text-4xl font-black mb-6 gradient-text-white-green">
+                        <h2 className="text-3xl lg:text-4xl font-black mb-6 gradient-text-white-brand">
                             Ready to Get Started?
                         </h2>
                         <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
@@ -189,7 +189,7 @@ export default function HowWeWorkPage() {
                         </p>
                         <Link
                             href="/contact"
-                            className="inline-block px-8 py-4 rounded-lg bg-brand-primary text-bg-primary font-bold text-lg hover:glow-green transition-all duration-300 hover:scale-105"
+                            className="inline-block px-8 py-4 rounded-lg bg-brand-primary text-bg-primary font-bold text-lg hover:glow-brand transition-all duration-300 hover:scale-105"
                         >
                             Schedule Your Call
                         </Link>

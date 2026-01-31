@@ -16,7 +16,7 @@ export default function Home() {
           {/* Neural Background for Hero */}
           <div className="absolute inset-0 z-0">
             <NeuralBackground
-              color="#00ff88"
+              color="#6858dd"
               speed={0.8}
               trailOpacity={0.2}
             />
@@ -30,7 +30,7 @@ export default function Home() {
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-semibold leading-[1.1] mb-6 sm:mb-8 tracking-tighter animate-fade-in-up delay-100">
               <span className="text-white block sm:inline">Build Blockchain</span>
               <span className="text-white block sm:inline"> Solutions </span>
-              <span className="gradient-text-green block sm:inline">That Scale</span>
+              <span className="gradient-text-brand block sm:inline">That Scale</span>
             </h1>
 
             <p className="text-sm sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed font-light px-4 animate-fade-in-up delay-200">
@@ -40,7 +40,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 sm:mb-20 animate-fade-in-up delay-300 w-full sm:w-auto px-4">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto px-8 py-4 rounded-lg bg-brand-primary text-bg-primary font-bold uppercase tracking-wide text-xs sm:text-sm hover:glow-green transition-all duration-300 hover:scale-105 text-center"
+                className="w-full sm:w-auto px-8 py-4 rounded-lg bg-brand-primary text-bg-primary font-bold uppercase tracking-wide text-xs sm:text-sm hover:glow-brand transition-all duration-300 hover:scale-105 text-center"
               >
                 Book Discovery Call
               </Link>
@@ -57,7 +57,7 @@ export default function Home() {
               {[
                 { label: 'Security First', value: 'Audited Code' },
                 { label: 'Clear Communication', value: 'Daily Updates' },
-                { label: 'Fast Delivery', value: '24/7 Development' }
+                { label: 'Fast Delivery', value: 'Development' }
               ].map((item, i) => (
                 <div key={i} className="text-center p-4 rounded-2xl glass-dark sm:bg-transparent border border-white/5 sm:border-none">
                   <div className="text-xl sm:text-2xl lg:text-3xl font-black text-brand-primary mb-1 sm:mb-2">{item.value}</div>
@@ -140,7 +140,7 @@ export default function Home() {
         <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative bg-bg-secondary">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 gradient-text-white-green">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 gradient-text-white-brand">
                 Why Choose Nifty Minds
               </h2>
               <p className="text-xl text-text-secondary max-w-3xl mx-auto">
@@ -243,7 +243,7 @@ export default function Home() {
               ].map((item, i) => (
                 <div key={i} className="relative">
                   <div className="glass-dark rounded-2xl p-8 h-full">
-                    <div className="text-6xl font-black text-brand-primary/20 mb-4">{item.step}</div>
+                    <div className="text-6xl font-black text-brand-primary/20 mb-4 font-system">{item.step}</div>
                     <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
                     <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
                   </div>
@@ -270,7 +270,7 @@ export default function Home() {
         <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative">
           <div className="max-w-4xl mx-auto">
             <div className="glass-darker rounded-3xl p-8 sm:p-12 lg:p-16 text-center border-glow">
-              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 gradient-text-white-green">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 gradient-text-white-brand">
                 Ready to Start Building?
               </h2>
               <p className="text-xl text-text-secondary mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -280,7 +280,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Link
                   href="/contact"
-                  className="px-8 py-4 rounded-lg bg-brand-primary text-bg-primary font-bold text-lg hover:glow-green transition-all duration-300 hover:scale-105 pulse-glow-green"
+                  className="px-8 py-4 rounded-lg bg-brand-primary text-bg-primary font-bold text-lg hover:glow-brand transition-all duration-300 hover:scale-105 pulse-glow-brand"
                 >
                   Book Your Discovery Call
                 </Link>

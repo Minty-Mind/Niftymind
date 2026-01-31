@@ -11,12 +11,9 @@ export default function Header() {
         <header className="fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b border-white/5 bg-bg-primary/80 backdrop-blur-md supports-[backdrop-filter]:bg-bg-primary/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex justify-between items-center">
                 <Link href="/" className="flex items-center gap-2 md:gap-3 group cursor-pointer">
-                    <div className="relative w-8 h-8 md:w-10 md:h-10 transition-transform group-hover:scale-110 duration-300">
+                    <div className="relative w-[140px] h-[140px] md:w-28 md:h-28 transition-transform group-hover:scale-110 duration-300">
                         <Image src="/logo.png" alt="Nifty Minds logo" fill className="object-contain" />
                     </div>
-                    <span className="font-bold text-xl md:text-2xl tracking-tight text-white">
-                        Nifty Minds
-                    </span>
                 </Link>
 
                 {/* Desktop Navigation */}

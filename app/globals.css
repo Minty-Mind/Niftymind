@@ -44,57 +44,57 @@ p {
   background: rgba(20, 25, 20, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(104, 88, 221, 0.1);
 }
 
 .glass-darker {
   background: rgba(10, 15, 10, 0.6);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 255, 136, 0.15);
+  border: 1px solid rgba(104, 88, 221, 0.15);
 }
 
 .glass-card {
   background: linear-gradient(180deg, rgba(20, 26, 20, 0.6) 0%, rgba(10, 15, 10, 0.8) 100%);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(104, 88, 221, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Text Gradients */
-.gradient-text-green {
-  background: linear-gradient(135deg, #00ff88 0%, #aaffd4 100%);
+.gradient-text-brand {
+  background: linear-gradient(135deg, #6858dd 0%, #319be3 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradient-text-white-green {
-  background: linear-gradient(135deg, #ffffff 30%, #00ff88 100%);
+.gradient-text-white-brand {
+  background: linear-gradient(135deg, #ffffff 30%, #6858dd 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Glow Effects */
-.glow-green {
-  box-shadow: 0 0 30px rgba(0, 255, 136, 0.25), 0 0 60px rgba(0, 255, 136, 0.1);
+.glow-brand {
+  box-shadow: 0 0 30px rgba(104, 88, 221, 0.25), 0 0 60px rgba(104, 88, 221, 0.1);
 }
 
-.glow-green-sm {
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2), 0 0 30px rgba(0, 255, 136, 0.1);
+.glow-brand-sm {
+  box-shadow: 0 0 15px rgba(104, 88, 221, 0.2), 0 0 30px rgba(104, 88, 221, 0.1);
 }
 
 .border-glow {
-  border: 1px solid rgba(0, 255, 136, 0.3);
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(104, 88, 221, 0.3);
+  box-shadow: 0 0 15px rgba(104, 88, 221, 0.1);
 }
 
 /* Tech Background Elements */
 .tech-grid {
   background-image:
-    linear-gradient(rgba(0, 255, 136, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(104, 88, 221, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(104, 88, 221, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -115,7 +115,7 @@ p {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(104, 88, 221, 0.4), transparent);
   animation: scan-line 6s linear infinite;
   pointer-events: none;
   z-index: 9999;
@@ -141,20 +141,20 @@ p {
 }
 
 /* Pulse glow animation */
-@keyframes pulse-glow-green {
+@keyframes pulse-glow-brand {
 
   0%,
   100% {
-    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+    box-shadow: 0 0 15px rgba(104, 88, 221, 0.2);
   }
 
   50% {
-    box-shadow: 0 0 30px rgba(0, 255, 136, 0.5), 0 0 50px rgba(0, 255, 136, 0.2);
+    box-shadow: 0 0 30px rgba(104, 88, 221, 0.5), 0 0 50px rgba(104, 88, 221, 0.2);
   }
 }
 
-.pulse-glow-green {
-  animation: pulse-glow-green 3s ease-in-out infinite;
+.pulse-glow-brand {
+  animation: pulse-glow-brand 3s ease-in-out infinite;
 }
 
 /* Card Tech Hover */
@@ -171,7 +171,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(104, 88, 221, 0.05) 0%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -179,8 +179,8 @@ p {
 
 .card-tech:hover {
   transform: translateY(-5px);
-  border-color: rgba(0, 255, 136, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(0, 255, 136, 0.15);
+  border-color: rgba(104, 88, 221, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(104, 88, 221, 0.15);
 }
 
 .card-tech:hover::before {

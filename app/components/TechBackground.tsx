@@ -45,7 +45,7 @@ export default function TechBackground() {
                 <div
                     className="absolute w-[500px] h-[500px] rounded-full opacity-10"
                     style={{
-                        background: 'radial-gradient(circle, rgba(0,255,136,0.3) 0%, transparent 70%)',
+                        background: 'radial-gradient(circle, rgba(104,88,221,0.3) 0%, transparent 70%)',
                         top: '-10%',
                         left: '-10%',
                         filter: 'blur(80px)'
@@ -54,7 +54,7 @@ export default function TechBackground() {
                 <div
                     className="absolute w-[500px] h-[500px] rounded-full opacity-10"
                     style={{
-                        background: 'radial-gradient(circle, rgba(0,255,136,0.2) 0%, transparent 70%)',
+                        background: 'radial-gradient(circle, rgba(49,155,227,0.2) 0%, transparent 70%)',
                         bottom: '-10%',
                         right: '-10%',
                         filter: 'blur(100px)'
