@@ -81,7 +81,7 @@ export default function AboutPage() {
                                 </div>
 
                                 <p className="text-text-secondary mb-6 leading-relaxed">
-                                    Our Lagos-based engineering team brings deep expertise in Rust, Solidity, and modern Web3 frameworks. They're the technical powerhouse behind every project we deliver.
+                                    Our Lagos-based engineering team brings deep expertise in Rust, Solidity, and modern Web<span className="font-system">3</span> frameworks. They're the technical powerhouse behind every project we deliver.
                                 </p>
 
                                 <h4 className="text-sm font-bold uppercase tracking-widest text-white mb-4">What We Build</h4>
@@ -110,9 +110,9 @@ export default function AboutPage() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {
-                                    icon: "⚡",
-                                    title: "24/7 Development",
-                                    desc: "While Toronto sleeps, Lagos builds. Your project progresses around the clock."
+                                    icon: "🌍",
+                                    title: (<><span className="font-system">24</span>/<span className="font-system">7</span> Development</>),
+                                    desc: "Our distributed team across Toronto and Lagos ensures work happens around the clock, accelerating delivery times."
                                 },
                                 {
                                     icon: "💎",
@@ -173,7 +173,9 @@ export default function AboutPage() {
                             Let's Work Together
                         </h2>
                         <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-                            Ready to experience the Nifty Minds difference? Book a call and let's discuss your project.
+                            Ready to experience the Nifty Minds difference?
+                            <Link href="/contact" className="underline text-brand-primary hover:text-brand-primary/80">Book a discovery call</Link>
+                            and let's discuss your project.
                         </p>
                         <Link
                             href="/contact"

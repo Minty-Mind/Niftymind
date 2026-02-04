@@ -28,16 +28,16 @@ export default function Home() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-semibold leading-[1.1] mb-6 sm:mb-8 tracking-tighter animate-fade-in-up delay-100">
-              <span className="text-white block sm:inline">Build Blockchain</span>
-              <span className="text-white block sm:inline"> Solutions </span>
-              <span className="gradient-text-brand block sm:inline">That Scale</span>
+              <span className="text-white block sm:inline">Secure blockchain solutions—</span>
+              <span className="gradient-text-brand block sm:inline">built to scale,</span>
+              <span className="text-white block sm:inline"> delivered with confidence.</span>
             </h1>
 
             <p className="text-sm sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed font-light px-4 animate-fade-in-up delay-200">
-              We combine Canadian business standards with world-class engineering talent to deliver secure, reliable blockchain infrastructure for startups and enterprises.
+              We help startups and teams ship smart contracts and blockchain infrastructure faster, without security risks or delivery headaches.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 sm:mb-20 animate-fade-in-up delay-300 w-full sm:w-auto px-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10 animate-fade-in-up delay-300 w-full sm:w-auto px-4">
               <Link
                 href="/contact"
                 className="w-full sm:w-auto px-8 py-4 rounded-lg bg-brand-primary text-bg-primary font-bold uppercase tracking-wide text-xs sm:text-sm hover:glow-brand transition-all duration-300 hover:scale-105 text-center"
@@ -50,6 +50,12 @@ export default function Home() {
               >
                 View Services
               </Link>
+            </div>
+
+            <div className="animate-fade-in-up delay-400 mb-16 sm:mb-20">
+              <p className="text-sm text-text-muted font-medium">
+                <span className="text-brand-primary font-bold">Best for:</span> funded startups and teams that need security-first smart contracts, fast.
+              </p>
             </div>
 
             {/* Trust Indicators */}
@@ -68,6 +74,47 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Recent Work / Proof Section */}
+        <section className="py-16 px-4 sm:px-6 relative bg-bg-secondary/30">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-black mb-8 text-white text-center">
+              Recent Work
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="glass-dark rounded-2xl p-8 hover:border-text-muted transition-colors border border-white/5">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl font-bold text-white">Smart Contract Development</h3>
+                  <span className="bg-brand-primary/20 text-brand-primary text-xs font-bold px-3 py-1 rounded-full">DeFi</span>
+                </div>
+                <p className="text-text-secondary text-sm mb-6 leading-relaxed">
+                  Designed and implemented secure Solidity smart contracts for a decentralized finance protocol. Focused on gas optimization and audit readiness.
+                </p>
+                <div className="space-y-2 text-sm text-text-muted">
+                  <div className="flex gap-2"><span className="text-brand-primary">✓</span> Delivered within <span className="font-system">3</span>-week timeline</div>
+                  <div className="flex gap-2"><span className="text-brand-primary">✓</span> <span className="font-system">100</span>% test coverage</div>
+                  <div className="flex gap-2"><span className="text-brand-primary">✓</span> Passed external audit</div>
+                </div>
+              </div>
+
+              <div className="glass-dark rounded-2xl p-8 hover:border-text-muted transition-colors border border-white/5">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl font-bold text-white">Blockchain Backend System</h3>
+                  <span className="bg-brand-primary/20 text-brand-primary text-xs font-bold px-3 py-1 rounded-full">Infrastructure</span>
+                </div>
+                <p className="text-text-secondary text-sm mb-6 leading-relaxed">
+                  Built a high-performance Rust backend for real-time blockchain data processing and event indexing.
+                </p>
+                <div className="space-y-2 text-sm text-text-muted">
+                  <div className="flex gap-2"><span className="text-brand-primary">✓</span> Handles <span className="font-system">10</span>k+ events/second</div>
+                  <div className="flex gap-2"><span className="text-brand-primary">✓</span> &lt;<span className="font-system">50</span>ms latency</div>
+                  <div className="flex gap-2"><span className="text-brand-primary">✓</span> Auto-scaling architecture</div>
+                </div>
+              </div>
+            </div>
+            <p className="text-center text-xs text-text-muted mt-6 italic">(Client details available upon request)</p>
+          </div>
+        </section>
+
         {/* Services Preview */}
         <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative">
           <div className="max-w-7xl mx-auto">
@@ -83,7 +130,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Blockchain & Web3 Development",
+                  title: (<>Blockchain & Web<span className="font-system">3</span> Development</>),
                   desc: "Custom smart contracts, DeFi protocols, and decentralized applications built with Solidity and Rust.",
                   icon: "⛓️"
                 },
@@ -153,11 +200,11 @@ export default function Home() {
                 {
                   flag: "🇨🇦",
                   location: "Toronto",
-                  title: "Canadian Business Standards",
+                  title: "Canadian Standards & Security",
                   points: [
-                    "Clear communication in your timezone",
-                    "Transparent project management",
-                    "Compliance with Canadian regulations",
+                    "Canadian-style project management & security",
+                    "Documentation & privacy-by-design",
+                    "Alignment with compliance (SOC 2-ready)",
                     "Direct access to leadership"
                   ]
                 },

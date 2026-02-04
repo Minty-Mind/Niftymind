@@ -15,7 +15,7 @@ export default function Footer() {
                             <span className="font-bold text-xl text-white">Nifty Minds</span>
                         </Link>
                         <p className="text-sm text-text-muted">
-                            Canada-Nigeria technology consultancy specializing in blockchain and Web3 development.
+                            Canada-Nigeria technology consultancy specializing in blockchain and Web<span className="font-system">3</span> development.
                         </p>
                     </div>
 
@@ -58,7 +58,7 @@ export default function Footer() {
 
                 <div className="pt-8 border-t border-brand-primary/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-text-muted">
-                        © {new Date().getFullYear()} Nifty Minds. All rights reserved.
+                        © <span className="font-system">{new Date().getFullYear()}</span> Nifty Minds. All rights reserved.
                     </p>
                     <div className="flex gap-6 text-sm text-text-muted">
                         <Link href="/privacy" className="hover:text-brand-primary transition-colors">Privacy</Link>

@@ -8,7 +8,7 @@ export default function HowWeWorkPage() {
         {
             step: "01",
             title: "Discovery & Strategy",
-            duration: "1-2 weeks",
+            duration: (<><span className="font-system">1</span>-<span className="font-system">2</span> weeks</>),
             description: "We start by understanding your business goals, technical requirements, and success criteria. This isn't a sales call—it's a collaborative planning session.",
             activities: [
                 "Initial discovery call to understand your vision",
@@ -27,7 +27,7 @@ export default function HowWeWorkPage() {
         {
             step: "02",
             title: "Architecture & Planning",
-            duration: "1-2 weeks",
+            duration: (<><span className="font-system">1</span>-<span className="font-system">2</span> weeks</>),
             description: "Before writing a single line of code, we design a scalable, secure architecture that will support your long-term growth.",
             activities: [
                 "Detailed system architecture design",
@@ -46,10 +46,10 @@ export default function HowWeWorkPage() {
         {
             step: "03",
             title: "Development & Testing",
-            duration: "4-12 weeks",
+            duration: (<><span className="font-system">4</span>-<span className="font-system">12</span> weeks</>),
             description: "Our team builds your solution using agile methodology, with daily progress updates and regular demos. You'll never be left wondering what's happening.",
             activities: [
-                "Sprint-based development (2-week sprints)",
+                (<>Sprint-based development (<span className="font-system">2</span>-week sprints)</>),
                 "Daily standup meetings with the team",
                 "Continuous integration and testing",
                 "Code reviews and quality assurance",

@@ -8,10 +8,16 @@ export default function ServicesPage() {
         {
             id: "blockchain",
             icon: "⛓️",
-            title: "Blockchain & Web3 Development",
+            title: (
+                <>Blockchain & Web<span className="font-system">3</span> Development</>
+            ),
             tagline: "Custom blockchain solutions built for scale and security",
-            description: "We build production-ready blockchain applications using Solidity, Rust, and modern Web3 frameworks. From smart contracts to full DeFi protocols, we handle the entire development lifecycle.",
-            whoItsFor: "Web3 startups, DeFi protocols, NFT projects, and enterprises exploring blockchain",
+            description: (
+                <>We build production-ready blockchain applications using Solidity, Rust, and modern Web<span className="font-system">3</span> frameworks. From smart contracts to full DeFi protocols, we handle the entire development lifecycle.</>
+            ),
+            whoItsFor: (
+                <>Web<span className="font-system">3</span> startups, DeFi protocols, NFT projects, and enterprises exploring blockchain</>
+            ),
             businessValue: [
                 "Faster time to market with experienced developers",
                 "Reduced risk through security-first development",
@@ -19,13 +25,18 @@ export default function ServicesPage() {
                 "Lower long-term costs with clean, maintainable code"
             ],
             capabilities: [
-                "Smart contract development (Solidity, Rust, Move)",
+                "Smart contract development (Solidity, Rust)",
                 "DeFi protocol architecture and implementation",
                 "NFT marketplace and minting platforms",
                 "Layer 2 scaling solutions",
                 "Cross-chain bridge development",
                 "Decentralized governance systems"
-            ]
+            ],
+            typicalEngagement: (
+                <>
+                    <span className="font-system">2</span>–<span className="font-system">4</span> weeks | Clear scope | Production-ready contracts
+                </>
+            )
         },
         {
             id: "audits",
@@ -47,7 +58,12 @@ export default function ServicesPage() {
                 "Reentrancy and overflow protection",
                 "Access control verification",
                 "Detailed audit reports with remediation steps"
-            ]
+            ],
+            typicalEngagement: (
+                <>
+                    <span className="font-system">1</span>–<span className="font-system">2</span> weeks | Written findings report
+                </>
+            )
         },
         {
             id: "fintech",
@@ -69,7 +85,8 @@ export default function ServicesPage() {
                 "KYC/AML compliance tools",
                 "Multi-signature wallet systems",
                 "Real-time settlement infrastructure"
-            ]
+            ],
+            typicalEngagement: "Custom scope | Regulatory-compliant delivery"
         },
         {
             id: "mvp",
@@ -77,7 +94,9 @@ export default function ServicesPage() {
             title: "MVP & Startup Engineering",
             tagline: "Get to market fast without compromising quality",
             description: "We help startups build and launch MVPs quickly. Our team works as an extension of yours, providing the technical expertise you need to validate your idea and secure funding.",
-            whoItsFor: "Early-stage startups, founders without technical co-founders, companies pivoting to Web3",
+            whoItsFor: (
+                <>Early-stage startups, founders without technical co-founders, companies pivoting to Web<span className="font-system">3</span></>
+            ),
             businessValue: [
                 "Launch in weeks, not months",
                 "Validate your idea with real users",
@@ -91,7 +110,12 @@ export default function ServicesPage() {
                 "User testing and iteration",
                 "Investor demo preparation",
                 "Post-launch support and scaling"
-            ]
+            ],
+            typicalEngagement: (
+                <>
+                    <span className="font-system">4</span>–<span className="font-system">8</span> weeks | MVP launch | scalable foundation
+                </>
+            )
         },
         {
             id: "backend",
@@ -113,7 +137,8 @@ export default function ServicesPage() {
                 "Database design and optimization",
                 "Cloud deployment (AWS, GCP, Azure)",
                 "Real-time data processing"
-            ]
+            ],
+            typicalEngagement: "Custom scope | Startup-ready delivery"
         }
     ];
 
@@ -175,6 +200,11 @@ export default function ServicesPage() {
                                             ))}
                                         </ul>
                                     </div>
+                                </div>
+
+                                <div className="mb-8 p-4 rounded-xl border border-brand-primary/20 bg-brand-primary/5">
+                                    <h3 className="text-xs font-bold uppercase tracking-widest text-brand-primary mb-2">Typical Engagement</h3>
+                                    <p className="text-white font-medium">{service.typicalEngagement}</p>
                                 </div>
 
                                 <div>
