@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TechBackground from "../components/TechBackground";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Services — Blockchain Development, Audits & Fintech Infrastructure",
+    description: "Smart contracts, security audits, fintech rails, MVP engineering, and backend APIs. Production-grade Web3 built with Canadian delivery standards.",
+    alternates: { canonical: "/services" },
+    openGraph: {
+        title: "Services | Nifty Minds",
+        description: "Smart contracts, security audits, fintech rails, MVP engineering, and backend APIs. Production-grade Web3 built with Canadian delivery standards.",
+        url: "/services",
+    },
+};
 
 export default function ServicesPage() {
     const services = [

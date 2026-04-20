@@ -24,7 +24,7 @@ export default function Home() {
 
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-block mb-6 px-4 py-2 rounded-full glass-dark border border-brand-primary/20 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-primary animate-fade-in-up">
-              Canada-Nigeria Technology Consultancy
+              Canadian Technology Consultancy
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-semibold leading-[1.1] mb-6 sm:mb-8 tracking-tighter animate-fade-in-up delay-100">
@@ -209,8 +209,8 @@ export default function Home() {
                   ]
                 },
                 {
-                  flag: "🇳🇬",
-                  location: "Lagos",
+                  flag: "🌍",
+                  location: "Global",
                   title: "World-Class Engineering",
                   points: [
                     "Elite Rust and Solidity developers",

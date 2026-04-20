@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TechBackground from "../components/TechBackground";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "About Nifty Minds",
+    description: "A Canadian technology consultancy with a global engineering team, delivering secure blockchain solutions for startups and enterprises.",
+    alternates: { canonical: "/about" },
+    openGraph: {
+        title: "About | Nifty Minds",
+        description: "A Canadian technology consultancy with a global engineering team, delivering secure blockchain solutions for startups and enterprises.",
+        url: "/about",
+    },
+};
 
 export default function AboutPage() {
     return (
@@ -17,7 +29,7 @@ export default function AboutPage() {
                             About <span className="gradient-text-green">Nifty Minds</span>
                         </h1>
                         <p className="text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                            We're a Canada-Nigeria technology consultancy bridging continents to deliver exceptional blockchain solutions.
+                            We're a Canadian technology consultancy with a global engineering team, delivering exceptional blockchain solutions.
                         </p>
                     </div>
 
@@ -70,18 +82,18 @@ export default function AboutPage() {
                                 </ul>
                             </div>
 
-                            {/* Lagos */}
+                            {/* Global Engineering */}
                             <div className="glass-darker rounded-3xl p-10 border-glow">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className="text-6xl">🇳🇬</div>
+                                    <div className="text-6xl">🌍</div>
                                     <div>
-                                        <div className="text-xs font-bold uppercase tracking-widest text-brand-primary mb-1">Lagos, Nigeria</div>
+                                        <div className="text-xs font-bold uppercase tracking-widest text-brand-primary mb-1">Global Engineering</div>
                                         <h3 className="text-2xl font-bold text-white">Engineering & Development</h3>
                                     </div>
                                 </div>
 
                                 <p className="text-text-secondary mb-6 leading-relaxed">
-                                    Our Lagos-based engineering team brings deep expertise in Rust, Solidity, and modern Web<span className="font-system">3</span> frameworks. They're the technical powerhouse behind every project we deliver.
+                                    Our distributed engineering team brings deep expertise in Rust, Solidity, and modern Web<span className="font-system">3</span> frameworks. They're the technical powerhouse behind every project we deliver.
                                 </p>
 
                                 <h4 className="text-sm font-bold uppercase tracking-widest text-white mb-4">What We Build</h4>
@@ -112,7 +124,7 @@ export default function AboutPage() {
                                 {
                                     icon: "🌍",
                                     title: (<><span className="font-system">24</span>/<span className="font-system">7</span> Development</>),
-                                    desc: "Our distributed team across Toronto and Lagos ensures work happens around the clock, accelerating delivery times."
+                                    desc: "Our globally distributed team ensures work happens around the clock, accelerating delivery times."
                                 },
                                 {
                                     icon: "💎",

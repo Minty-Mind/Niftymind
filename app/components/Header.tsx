@@ -9,7 +9,7 @@ export default function Header() {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b border-white/5 bg-bg-primary/80 backdrop-blur-md supports-[backdrop-filter]:bg-bg-primary/50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-[] flex justify-between items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
                 <Link href="/" className="flex items-center gap-2 md:gap-3 group cursor-pointer">
                     <div className="relative w-[180px] h-[180px] md:w-[160px] md:h-[220px] transition-transform group-hover:scale-110 duration-300">
                         <Image src="/logo.png" alt="Nifty Minds logo" fill className="object-contain" />
@@ -22,7 +22,8 @@ export default function Header() {
                         {[
                             { name: 'Services', href: '/services' },
                             { name: 'How We Work', href: '/how-we-work' },
-                            { name: 'About', href: '/about' }
+                            { name: 'About', href: '/about' },
+                            { name: 'FAQ', href: '/faq' }
                         ].map((item, i) => (
                             <li key={i}>
                                 <Link
@@ -71,6 +72,7 @@ export default function Header() {
                             { name: 'Services', href: '/services' },
                             { name: 'How We Work', href: '/how-we-work' },
                             { name: 'About', href: '/about' },
+                            { name: 'FAQ', href: '/faq' },
                             { name: 'Contact', href: '/contact' }
                         ].map((item, i) => (
                             <Link

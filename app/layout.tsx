@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 
 const unigeo = localFont({
@@ -49,10 +50,104 @@ const unigeo = localFont({
   display: "swap",
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://niftyminds.io";
+const SITE_NAME = "Nifty Minds";
+const SITE_TITLE = "Nifty Minds | Canadian Standards. Global Technical Excellence.";
+const SITE_DESCRIPTION =
+  "Canadian blockchain consultancy. Secure smart contracts, audits, and Web3 infrastructure — built to scale, delivered with confidence.";
+
 export const metadata: Metadata = {
-  title: "Nifty Minds | Canadian Standards. Global Technical Excellence.",
-  description: "Bridging North American business needs with world-class blockchain development. Specializing in Rust, Solidity, and Enterprise Web3 solutions.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: "%s | Nifty Minds",
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: [
+    "blockchain development",
+    "smart contract audit",
+    "Solidity",
+    "Rust",
+    "Web3 consultancy",
+    "DeFi development",
+    "fintech infrastructure",
+    "Canadian blockchain agency",
+  ],
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    locale: "en_CA",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nifty Minds — Canadian Standards. Global Technical Excellence.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#0a0a0a",
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE_NAME,
+  legalName: "Nifty Minds Global",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  description: SITE_DESCRIPTION,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Toronto",
+    addressCountry: "CA",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@niftyminds.io",
+    contactType: "sales",
+    areaServed: "Worldwide",
+    availableLanguage: ["English"],
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
 };
 
 export default function RootLayout({
@@ -60,10 +155,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body className={`${unigeo.variable}`}>
         {children}
+        {plausibleDomain && (
+          <Script
+            src="https://plausible.io/js/script.js"
+            data-domain={plausibleDomain}
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );

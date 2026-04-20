@@ -15,7 +15,7 @@ export default function Footer() {
                             <span className="font-bold text-xl text-white">Nifty Minds</span>
                         </Link>
                         <p className="text-sm text-text-muted">
-                            Canada-Nigeria technology consultancy specializing in blockchain and Web<span className="font-system">3</span> development.
+                            Canadian technology consultancy specializing in blockchain and Web<span className="font-system">3</span> development.
                         </p>
                     </div>
 
@@ -36,20 +36,21 @@ export default function Footer() {
                         <ul className="space-y-2 text-sm text-text-secondary">
                             <li><Link href="/about" className="hover:text-brand-primary transition-colors">About Us</Link></li>
                             <li><Link href="/how-we-work" className="hover:text-brand-primary transition-colors">How We Work</Link></li>
+                            <li><Link href="/faq" className="hover:text-brand-primary transition-colors">FAQ</Link></li>
                             <li><Link href="/contact" className="hover:text-brand-primary transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 
                     {/* Locations */}
                     <div>
-                        <h4 className="font-semibold text-white mb-4">Locations</h4>
+                        <h4 className="font-semibold text-white mb-4">Headquarters</h4>
                         <div className="space-y-4 text-sm text-text-secondary">
                             <div>
                                 <div className="font-medium text-white mb-1">🇨🇦 Toronto</div>
                                 <p className="text-text-muted">Business & Strategy</p>
                             </div>
                             <div>
-                                <div className="font-medium text-white mb-1">🇳🇬 Lagos</div>
+                                <div className="font-medium text-white mb-1">🌍 Global</div>
                                 <p className="text-text-muted">Engineering & Development</p>
                             </div>
                         </div>

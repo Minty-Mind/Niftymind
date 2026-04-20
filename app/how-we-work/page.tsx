@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TechBackground from "../components/TechBackground";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "How We Work — Our Engagement Process",
+    description: "A four-phase delivery process: discovery, architecture, build, and launch. Weekly demos, daily updates, and direct access to our engineering leads.",
+    alternates: { canonical: "/how-we-work" },
+    openGraph: {
+        title: "How We Work | Nifty Minds",
+        description: "A four-phase delivery process: discovery, architecture, build, and launch. Weekly demos, daily updates, and direct access to our engineering leads.",
+        url: "/how-we-work",
+    },
+};
 
 export default function HowWeWorkPage() {
     const process = [

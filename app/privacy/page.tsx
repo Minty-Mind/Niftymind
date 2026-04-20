@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+export const metadata: Metadata = {
+    title: "Privacy Policy",
+    description: "How Nifty Minds collects, uses, and protects your personal information.",
+    alternates: { canonical: "/privacy" },
+};
 
 export default function PrivacyPage() {
     return (
@@ -24,7 +31,7 @@ export default function PrivacyPage() {
                 <h2 className="text-2xl font-semibold mt-6 mb-2 text-white">Your Rights</h2>
                 <p className="mb-4">You may request access, correction, or deletion of your personal information at any time by contacting us.</p>
                 <h2 className="text-2xl font-semibold mt-6 mb-2 text-white">Contact</h2>
-                <p className="mb-4">Email: contact@niftymindsglobal.com</p>
+                <p className="mb-4">Email: hello@niftyminds.io</p>
             </main>
             <Footer />
         </div>

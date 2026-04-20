@@ -1,7 +1,20 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TechBackground from "../components/TechBackground";
 import CalendlyWidget from "../components/CalendlyWidget";
+import ContactForm from "../components/ContactForm";
+
+export const metadata: Metadata = {
+    title: "Contact — Book a Discovery Call",
+    description: "Schedule a free 30-minute discovery call or send us your project details. We respond within 24 hours.",
+    alternates: { canonical: "/contact" },
+    openGraph: {
+        title: "Contact | Nifty Minds",
+        description: "Schedule a free 30-minute discovery call or send us your project details. We respond within 24 hours.",
+        url: "/contact",
+    },
+};
 
 export default function ContactPage() {
     return (
@@ -17,7 +30,7 @@ export default function ContactPage() {
                             Book Your <span className="gradient-text-brand">Discovery Call</span>
                         </h1>
                         <p className="text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                            Schedule a free 30-minute discovery call. We'll discuss your project, answer your questions, and outline a clear path forward.
+                            Schedule a free <span className="font-system">30</span>-minute discovery call. We&apos;ll discuss your project, answer your questions, and outline a clear path forward.
                         </p>
                     </div>
 
@@ -29,98 +42,7 @@ export default function ContactPage() {
                             {/* Contact Form */}
                             <div className="glass-darker rounded-3xl p-8 lg:p-12 border-glow">
                                 <h2 className="text-2xl font-bold mb-6 text-white">Or Send us a message</h2>
-
-                                <form className="space-y-6">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div>
-                                            <label className="block text-sm font-semibold text-text-secondary mb-2">Full Name *</label>
-                                            <input
-                                                type="text"
-                                                placeholder="John Doe"
-                                                required
-                                                className="w-full bg-bg-tertiary border border-brand-primary/20 rounded-lg p-4 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 text-white placeholder:text-text-muted transition-all"
-                                            />
-                                        </div>
-                                        <div>
-                                            <label className="block text-sm font-semibold text-text-secondary mb-2">Work Email *</label>
-                                            <input
-                                                type="email"
-                                                placeholder="john@company.com"
-                                                required
-                                                className="w-full bg-bg-tertiary border border-brand-primary/20 rounded-lg p-4 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 text-white placeholder:text-text-muted transition-all"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-sm font-semibold text-text-secondary mb-2">Company</label>
-                                        <input
-                                            type="text"
-                                            placeholder="Your Company Name"
-                                            className="w-full bg-bg-tertiary border border-brand-primary/20 rounded-lg p-4 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 text-white placeholder:text-text-muted transition-all"
-                                        />
-                                    </div>
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div>
-                                            <label className="block text-sm font-semibold text-text-secondary mb-2">Service Interest</label>
-                                            <select className="w-full bg-bg-tertiary border border-brand-primary/20 rounded-lg p-4 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 text-white transition-all appearance-none cursor-pointer">
-                                                <option value="">Select a service</option>
-                                                <option value="blockchain">Blockchain Development</option>
-                                                <option value="audit">Smart Contract Audit</option>
-                                                <option value="fintech">Fintech Infrastructure</option>
-                                                <option value="mvp">MVP Development</option>
-                                                <option value="backend">Backend & API</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label className="block text-sm font-semibold text-text-secondary mb-2">Preferred Timeline</label>
-                                            <select className="w-full bg-bg-tertiary border border-brand-primary/20 rounded-lg p-4 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 text-white transition-all appearance-none cursor-pointer">
-                                                <option value="">Select timeline</option>
-                                                <option value="asap">ASAP</option>
-                                                <option value="1-3-months">1-3 Months</option>
-                                                <option value="flexible">Flexible</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-sm font-semibold text-text-secondary mb-2">Budget Range (Optional)</label>
-                                        <select className="w-full bg-bg-tertiary border border-brand-primary/20 rounded-lg p-4 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 text-white transition-all appearance-none cursor-pointer">
-                                            <option value="">Select budget range</option>
-                                            <option value="<10k">&lt; $10k</option>
-                                            <option value="10k-25k">$10k - $25k</option>
-                                            <option value="25k-50k">$25k - $50k</option>
-                                            <option value="50k+">$50k+</option>
-                                        </select>
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-sm font-semibold text-text-secondary mb-2">Project Details *</label>
-                                        <textarea
-                                            placeholder="Tell us about your project goals, timeline, and any specific requirements..."
-                                            rows={6}
-                                            required
-                                            className="w-full bg-bg-tertiary border border-brand-primary/20 rounded-lg p-4 focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 text-white placeholder:text-text-muted transition-all resize-none"
-                                        ></textarea>
-                                    </div>
-
-                                    <div className="flex items-start gap-3 p-4 rounded-lg bg-brand-primary/5 border border-brand-primary/10">
-                                        <input type="checkbox" required id="human-check" className="mt-1 w-4 h-4 rounded border-brand-primary/30 text-brand-primary focus:ring-brand-primary bg-bg-tertiary" />
-                                        <label htmlFor="human-check" className="text-sm text-text-secondary">I am not a robot</label>
-                                    </div>
-
-                                    <button
-                                        type="submit"
-                                        className="w-full py-4 rounded-lg bg-brand-primary text-bg-primary font-bold text-lg hover:glow-green transition-all duration-300 hover:scale-[1.02]"
-                                    >
-                                        Send Message →
-                                    </button>
-
-                                    <p className="text-sm text-text-muted text-center">
-                                        We'll respond within 24 hours. All conversations are confidential.
-                                    </p>
-                                </form>
+                                <ContactForm />
                             </div>
                         </div>
 
@@ -151,9 +73,9 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex gap-4 items-start">
-                                        <div className="text-3xl">🇳🇬</div>
+                                        <div className="text-3xl">🌍</div>
                                         <div>
-                                            <h4 className="font-bold text-white mb-1">Lagos Office</h4>
+                                            <h4 className="font-bold text-white mb-1">Global Engineering</h4>
                                             <p className="text-text-secondary text-sm">
                                                 Engineering & Development Hub
                                             </p>
